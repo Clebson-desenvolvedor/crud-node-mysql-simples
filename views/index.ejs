@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container ">
+  <h2><%= title %></h2>
+  <a href="/add" class="btn">Novo Relógio</a><br/><br/>
+  <table class="table" >
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>MARCA</th>
+        <th>AÇÃO</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% relogios.forEach(function(dados_relogios){ %>
+            <tr>
+                <td><%= dados_relogios.id %></td>
+                <td><%= dados_relogios.marca %></td>
+                <td>
+                    <a href="edit/<%= dados_relogios.id %>" class="btn">Editar</a>
+                    <a href="delete/<%= dados_relogios.id %>" class="btn">Apagar</a>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

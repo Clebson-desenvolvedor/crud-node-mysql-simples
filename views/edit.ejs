@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <h2><%= title %></h2>
+        <form action="/update" method="POST">
+            <input type="hidden" value="<%= dados_relogios.id %>" name="id">
+            <div class="form-group">
+                <label for="marca">* Marca:</label>
+                <input type="text" id="marca" placeholder="Coloque a marca do relógio"
+                    value="<%= dados_relogios.marca %>" name="marca" required>
+            </div>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
